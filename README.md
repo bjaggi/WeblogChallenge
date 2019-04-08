@@ -1,3 +1,14 @@
+Submitting:
+  spark-submit --master yarn-client \
+       --num-executors 2 \
+       --driver-memory 512m \
+       --executor-memory 512m \
+       --executor-cores 1 \
+       --class simpleexample.SparkFileExample \
+       spark-streaming-simple-example-0.1-SNAPSHOT.jar /spark_lo
+       
+
+
 # WeblogChallenge
 
 The challenge is to make make analytical observations about the data using the distributed tools below.
