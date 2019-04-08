@@ -1,0 +1,72 @@
+These results are from processing a sample collection of records ( taken from the real data file) 
+
+##### Goal-1 : Number of Site Visited Per User  ##### 
++---------------------+--------------+
+|clientIpPort         |Page_Hit_Count|
++---------------------+--------------+
+|123.242.248.130:54635|4             |
+|120.56.144.188:62242 |2             |
+|106.216.149.189:32634|2             |
+|180.179.213.94:48725 |1             |
+|122.248.183.1:31420  |1             |
++---------------------+--------------+
+only showing top 5 rows
+
+
+
+#####  Goal-2-a : Average Session Time per unique IP ##### 
++---------------------+-------------------+
+|clientIpPort         |Session_Time_In_Sec|
++---------------------+-------------------+
+|120.56.144.188:62242 |6                  |
+|123.242.248.130:54635|5                  |
++---------------------+-------------------+
+
+
+
+
+
+ #####  Goal-2-b : Overall Average Session Time  ##### 
++----------------+
+|Avg_Session_Time|
++----------------+
+|5.5             |
++----------------+
+
+
+
+
+
+  #####  Goal-3 -a  : Determine unique URL visits per session  ##### 
++--------------------+---------------------------------------------------------------------------------------------------------------------+
+|clientIpPort        |UNIQUE_URLS_VISITED                                                                                                  |
++--------------------+---------------------------------------------------------------------------------------------------------------------+
+|182.64.106.42:13224 |[https://paytm.com:443/]                                                                                             |
+|136.8.2.69:12657    |[https://paytm.com:443/papi/v1/promosearch/product/17028045/offers?parent_id=5254231&price=599&channel=web&version=2]|
+|122.160.74.72:51442 |[https://paytm.com:443/]                                                                                             |
+|180.179.213.94:48725|[https://paytm.com:443/shop/p/micromax-yu-yureka-moonstone-grey-MOBMICROMAX-YU-DUMM141CD60AF7C_34315]                |
+|122.248.183.1:31420 |[https://paytm.com:443/shop/cart?channel=web&version=2]                                                              |
++--------------------+---------------------------------------------------------------------------------------------------------------------+
+only showing top 5 rows
+
+
+
+
+
+  #####  Goal-3 -b  : Determine unique URL visits per session, sorted by unique url count  ##### 
+[123.242.248.130:54635,3,WrappedArray(https://paytm.com:443/shop/authresponse?code=f2405b05-e2ee-4b0d-8f6a-9fed0fcfe2e0&state=null, https://paytmm.com:443/shop/v1/frequentorders?channel=web&version=2, https://paytm.com:443/shop/v1/frequentorders?channel=web&version=2)]
+[120.56.144.188:62242,2,WrappedArray(https://paytm.com:443/myorders/1047095444, https://paytm.com:443/shop/code?code=5d9b2e49-90ec-4609-9857-cc7c1d4b4737)]
+[136.8.2.69:12657,1,WrappedArray(https://paytm.com:443/papi/v1/promosearch/product/17028045/offers?parent_id=5254231&price=599&channel=web&version=2)]
+[180.179.213.94:48725,1,WrappedArray(https://paytm.com:443/shop/p/micromax-yu-yureka-moonstone-grey-MOBMICROMAX-YU-DUMM141CD60AF7C_34315)]
+[122.160.74.72:51442,1,WrappedArray(https://paytm.com:443/)]
+
+
+
+
+  #####  Goal-4 : Most engaged users, IPs with the longest session times  ##### 
++---------------------+-------------------+
+|clientIpPort         |Session_Time_In_Sec|
++---------------------+-------------------+
+|120.56.144.188:62242 |6                  |
+|123.242.248.130:54635|5                  |
++---------------------+-------------------+
