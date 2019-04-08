@@ -1,5 +1,4 @@
 # WeblogChallenge
-This is an interview challenge for Paytm Labs. Please feel free to fork. Pull Requests will be ignored.
 
 The challenge is to make make analytical observations about the data using the distributed tools below.
 
@@ -14,26 +13,9 @@ The challenge is to make make analytical observations about the data using the d
 
 4. Find the most engaged users, ie the IPs with the longest session times
 
-## Additional questions for Machine Learning Engineer (MLE) candidates:
-1. Predict the expected load (requests/second) in the next minute
 
-2. Predict the session length for a given IP
-
-3. Predict the number of unique URL visits by a given IP
-
-## Tools allowed (in no particular order):
+## Tools Used
 - Spark (any language, but prefer Scala or Java)
-- Pig
-- MapReduce (Hadoop 2.x only)
-- Flink
-- Cascading, Cascalog, or Scalding
-
-If you need Hadoop, we suggest 
-HDP Sandbox:
-http://hortonworks.com/hdp/downloads/
-or 
-CDH QuickStart VM:
-http://www.cloudera.com/content/cloudera/en/downloads.html
 
 
 ### Additional notes:
@@ -63,3 +45,10 @@ We want to see how you handle:
 - Messy (ie real) data
 - Understanding data transformation
 This is not a pass or fail test, we want to hear about your challenges and your successes with this particular problem.
+
+
+
+TODO : 
+fix the code on the repo
+spark streaming  to address windows ( check if batch can handle window processing, probably ncat ..)
+
