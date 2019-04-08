@@ -1,0 +1,79 @@
+Below are results from Spark Job running on real data on the local machine.
+
+##### Goal-1 : Number of Site Visited Per User  ####
++--------------------+--------------+
+|clientIpPort        |Page_Hit_Count|
++--------------------+--------------+
+|112.196.25.164:55986|1946          |
+|112.196.25.164:42792|1752          |
+|112.196.25.164:37516|1429          |
+|54.169.191.85:15462 |768           |
+|106.51.132.54:5048  |599           |
++--------------------+--------------+
+only showing top 5 rows
+
+
+
+##### Goal-2-a : Average Session Time per unique IP #####
++-------------------+-------------------+
+|clientIpPort       |Session_Time_In_Sec|
++-------------------+-------------------+
+|106.186.23.95:35629|66511              |
+|106.186.23.95:35632|66511              |
+|106.186.23.95:35626|66511              |
+|106.186.23.95:39646|66500              |
+|106.186.23.95:40452|66500              |
++-------------------+-------------------+
+only showing top 5 rows
+
+
+
+##### Goal-2-b : Overall Average Session Time #####
++------------------+
+|Avg_Session_Time  |
++------------------+
+|3792.3519305180525|
++------------------+
+
+
+##### Goal-3 -a  : Determine unique URL visits per session #####
++-------------------+---------------------------------------------------------------------------------------------------+
+|clientIpPort       |UNIQUE_URLS_VISITED                                                                                |
++-------------------+---------------------------------------------------------------------------------------------------+
+|1.187.167.214:65257|[http://www.paytm.com:80/blog/the-all-new-paytm-cash-wallet-for-you/]                              |
+|1.187.170.77:64760 |[https://paytm.com:443/]                                                                           |
+|1.187.179.217:34549|[https://paytm.com:443/paytmcash, https://paytm.com:443/shop/cart,                                 |
+		    |https://paytm.com:443/]                                                                            |
+|1.187.185.201:46980|[https://paytm.com:443/papi/v1/expresscart/verify]                                                 |
+|1.187.202.35:38668 |[https://paytm.com:443/shop/wallet/txnhistory?page_size=10&page_number=0&channel=web&version=2,    |
+	    	    | https://paytm.com:443/shop/authresponse?code=d8c50cfa-7217-472e-9bac-2f43608333d5&state=,         |
+	    	    | https://paytm.com:443/shop/v1/frequentorders?channel=web&version=2,                               |
+	    	    | https://paytm.com:443/shop/orderdetail/1116641070?channel=web&version=2]|                         |
++-------------------+---------------------------------------------------------------------------------------------------+
+only showing top 5 rows
+
+
+
+
+
+Goal-3 -b  : Determine unique URL visits per session, sorted by unique url count  (o/p is edited to fit in the page)
+[Client_IP_PORT , Number_Of_Unique_URLS Visited, URLs]
+[106.51.132.54:5048,411,WrappedArray(https://paytm.com:443.....)]
+[106.51.132.54:5049,322,WrappedArray(https://paytm.com:443/shop/h/books-media-stationery/, https://paytm.com:443/..%2f...)]
+[106.51.132.54:4508,292,WrappedArray(https://paytm.com:443/shop/g/electronics/the-electronic-store/upto-rs, https://paytm.com:443/shop/h/brand-store/%22%7cdir, https://paytm.com:443/offer/1e309/..., )]
+[106.51.132.54:5037,272,WrappedArray(https://paytm.com:443/shop/h/%7cdir/stationery, https://paytm.com:443/shop/h/%0acat%20%2fetc..)]
+[106.51.132.54:4974,251,WrappedArray(https://paytm.com:443/, https://paytm.com:443/shop/g/paytm-home/, https://paytm.com:443/shop/g/electronics/invalid..)]
+
+
+
+ **  Goal-4 : Most engaged users, IPs with the longest session times
++-------------------+-------------------+
+|clientIpPort       |Session_Time_In_Sec|
++-------------------+-------------------+
+|106.186.23.95:35629|66511              |
+|106.186.23.95:35632|66511              |
+|106.186.23.95:35626|66511              |
+|106.186.23.95:39646|66500              |
+|106.186.23.95:40452|66500              |
++-------------------+-------------------+
+only showing top 5 rows
