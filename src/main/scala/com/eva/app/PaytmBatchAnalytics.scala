@@ -4,8 +4,10 @@ import org.apache.spark.sql.types.{DataTypes, TimestampType}
 import org.apache.log4j._
 import org.apache.spark.sql.SaveMode
 import org.apache.spark.sql.SparkSession
+import com.eva.app.PaytmUtils.mapper
 
-object PaytmAnalytics {
+
+object PaytmBatchAnalytics {
   //Not required on Mac, Windows Only
   //System.setProperty("hadoop.home.dir", "C:\\Softwares\\WinUtils\\");
   /**
@@ -23,7 +25,6 @@ object PaytmAnalytics {
       .config("spark.hadoop.hive.cli.print.header", "true")
       .config("header", "true")
       .getOrCreate()
-
 
     // Convert our csv file to a DataSet, using our ClickStream case class to infer the schema.
     import spark.implicits._
@@ -131,25 +132,6 @@ object PaytmAnalytics {
     spark.stop()
   }
 
-  /**
-    *
-    * @param line
-    * @return
-    */
-  def mapper(line:String): ClickStream = {
-    val parts = line.split(" ")
 
-    val clickStream:ClickStream = new ClickStream(parts(0), parts(2), parts(5), parts(12))
-    return clickStream
-  }
-
-  /**
-    *
-    * @param timeStamp
-    * @param clientIpPort
-    * @param backendProcessingTime
-    * @param url
-    */
-  case class ClickStream(timeStamp:String, clientIpPort : String, backendProcessingTime : String , url : String )
 
 }
