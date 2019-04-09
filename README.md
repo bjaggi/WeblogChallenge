@@ -1,11 +1,11 @@
-Submitting:
+Submitting The Job :
   spark-submit --master yarn-client \
        --num-executors 2 \
        --driver-memory 512m \
        --executor-memory 512m \
        --executor-cores 1 \
-       --class simpleexample.SparkFileExample \
-       spark-streaming-simple-example-0.1-SNAPSHOT.jar /spark_lo
+       --class com.eva.app.PaytmAnalytics \
+       weblogchallenge_2.11-1.0.jar /spark_lo
        
 
 
