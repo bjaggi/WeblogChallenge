@@ -41,5 +41,9 @@ cat  data/sample_click_stream.txt >  data/unit_test2
 
 ``` 
 
-## Reference
+## References
 https://docs.hortonworks.com/HDPDocuments/HDP3/HDP-3.1.0/running-spark-applications/content/running_sample_spark_2_x_applications.html
+
+https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/streaming/clickstream/PageViewStream.scala
+
+
