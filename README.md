@@ -12,7 +12,7 @@ The output of the code has been saved to git for easy interpretation:
     https://github.com/bjaggi/WeblogChallenge/blob/master/Real_Data_Spark_Batch_Mode_Results.txt
     
     
-   #### Output from Sample Data in Streaming Mode ()
+   #### Output from Sample Data in Streaming Mode (PaytmStreamingAnalytics.scala)
     https://github.com/bjaggi/WeblogChallenge/blob/master/Sample_Mock_Data_Spark_Batch_Mode_Results.txt
 
 
