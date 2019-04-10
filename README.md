@@ -1,7 +1,7 @@
 
 
 # WeblogChallenge
-##Approach
+## Approach
 This applicaton was built using spark & scala. Application has been designed and tested to run both in the batch mode and streaming mode. Since the code was ran on a laptop, portions of the code are now commented in effort to finish the job in less than 15 secs. Also portion of the code is commented for rapid development/easy interpretation of logs.
 
 To run the job on the cluster we need access to a cluster and run a spark
@@ -18,7 +18,7 @@ The output of the code has been saved to git for easy interpretation:
 
 Spark UI : http://localhost:4040/jobs/
 
-##To Run the Job on the Cluster  :   
+## To Run the Job on the Cluster  :   
 
 ``` 
 spark-submit 
@@ -34,7 +34,7 @@ spark-submit
 ```
 
 
-#Utils To create test file for Streaming :
+# Utils To create test file for Streaming :
 ``` 
 cat  data/sample_click_stream.txt >  data/unit_test1
 cat  data/sample_click_stream.txt >  data/unit_test2
