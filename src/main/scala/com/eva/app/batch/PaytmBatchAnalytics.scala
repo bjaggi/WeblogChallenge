@@ -3,6 +3,7 @@ package com.eva.app.batch
 import com.eva.app.utils.PaytmUtils.mapper
 import org.apache.spark.sql.types.{DataTypes, TimestampType}
 import org.apache.spark.sql.{SaveMode, SparkSession}
+import org.apache.log4j.{Level, Logger}
 
 object PaytmBatchAnalytics {
   //Not required on Mac, Windows Only
@@ -12,7 +13,7 @@ object PaytmBatchAnalytics {
     */
   def main(args: Array[String]): Unit = {
     // Set the log level to only print errors ( For Development Only )
-    //Logger.getLogger("org").setLevel(Level.ERROR)
+    Logger.getLogger("org").setLevel(Level.ERROR)
 
     // Use new SparkSession interface in Spark 2.0
     val spark = SparkSession
@@ -104,23 +105,25 @@ object PaytmBatchAnalytics {
     // Commenting this as sorting took a long time on real data and local machine
     val results = sortedUniqueUrlDF.take(5)
     results.foreach(println)
-    /*sortedUniqueUrlDF
+    //write to output file
+    sortedUniqueUrlDF
       .coalesce(1)
       .write
       .option("header", "true")
       .mode(SaveMode.Overwrite)
       .save("OutPutProcessedData/goal_3_unique_visit_per_session.txt")
-*/
+
 
     //Goal4 : Find the most engaged users, ie the IPs with the longest session times
     println("\n\n\n")
     println("  Goal-4 : Most engaged users, IPs with the longest session times")
     clickStreamWithSessionTimeDS.show(5, false)
-    /* clickStreamWithSessionTimeDS.coalesce(1).write
+    //write to output file
+    clickStreamWithSessionTimeDS.coalesce(1).write
        .format("com.databricks.spark.csv")
        .option("header", "true")
        .mode(SaveMode.Overwrite)
-       .csv("OutPutProcessedData/goal_4_most_active_users.txt")*/
+       .csv("OutPutProcessedData/goal_4_most_active_users.txt")
 
 
     // GraceFul Spark Shutdown !

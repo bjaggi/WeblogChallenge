@@ -2,7 +2,15 @@
 
 # WeblogChallenge
 ## Approach
-This applicaton was built using spark & scala. Application has been designed and tested to run both in the batch mode and streaming mode. Since the code was ran on a laptop, portions of the code are now commented in effort to finish the job in less than 15 secs. Also portion of the code is commented for rapid development/easy interpretation of logs.
+This applicaton was built using spark & scala. Application has been designed and tested to run both in the batch mode(Ideal) and streaming mode(read new file in the directory). Since the code was developed and run on a laptop. To run of mac simply clone the project and run the PaytmBatchAnalytics file, to run on windows we require the winutils and configure hadoop.home.dir home
+```$xslt
+System.setProperty("hadoop.home.dir", "C:\\Softwares\\WinUtils");
+```
+To enable spark  logs( use this for local testing only), uncomment this line
+```$xslt
+Logger.getLogger("org").setLevel(Level.ERROR)
+```
+
 
 To run the job on the cluster we need access to a cluster and run a spark
 ## Output 
